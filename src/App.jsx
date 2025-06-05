@@ -6,7 +6,7 @@ import axios from "axios";
 function App() {
   const [skips, setSkips] = useState([]);
   const [selectedSkip, setSelectedSkip] = useState({});
-  const [view, setView] = useState(localStorage.getItem("view"));
+  const [view, setView] = useState(() => localStorage.getItem("view") || "grid");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
