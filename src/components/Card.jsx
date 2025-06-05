@@ -1,4 +1,4 @@
-import chromium from "../assets/chromium.png";
+import chromium from "../assets/10-yarder-skip.jpg";
 const Card = ({ item, setSelectedSkip, selectedSkip }) => {
   const handleSelectedSkip = () => {
     if (selectedSkip.id === item.id) {
@@ -22,18 +22,18 @@ const Card = ({ item, setSelectedSkip, selectedSkip }) => {
       onClick={handleSelectedSkip}
     >
       <div
-        className="relative rounded-md w-full h-[30vh] mx-auto"
+        className="relative rounded-md w-full min-h-[30vh] max-h-[50vh] mx-auto"
         style={{
           backgroundImage: `url(${chromium})`,
           backgroundPosition: "center",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
         <span className="absolute top-2 left-1 py-1 px-2 bg-[var(--secondary)] rounded-xl font-bold">
           {item.size} Yards
         </span>
-        {!item.allowed_on_road && <span className="absolute text-sm bottom-2 right-1 py-1 px-2 bg-[tomato] rounded-md font-bold animate-pulse"><i className="fas fa-warning"></i>{" "}Not allowed on road</span>}
+        {!item.allowed_on_road && <span className="absolute text-sm bottom-2 right-1 py-1 px-2 bg-[tomato] text-white rounded-md font-bold animate-pulse"><i className="fas fa-warning"></i>{" "}Not allowed on road</span>}
       </div>
       <h2>{item.size || 0} Yard Skip</h2>
       <h4 className="text-[var(--secondary)]">
