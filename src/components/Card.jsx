@@ -4,6 +4,9 @@ import skipImage3 from "../assets/skipImage3.jpg";
 import skipImage4 from "../assets/skipImage4.webp";
 import skipImage5 from "../assets/skipImage5.webp";
 import skipImage6 from "../assets/skipImage6.jpg";
+import skipImage7 from "../assets/skipImage7.png";
+import skipImage8 from "../assets/skipImage8.jpg";
+import skipImage9 from "../assets/skipImage9.webp";
 
 const Card = ({ item, setSelectedSkip, selectedSkip }) => {
   const handleSelectedSkip = () => {
@@ -26,6 +29,9 @@ const Card = ({ item, setSelectedSkip, selectedSkip }) => {
     skipImage4,
     skipImage5,
     skipImage6,
+    skipImage7,
+    skipImage8,
+    skipImage9,
   ];
   const skipImageIndex = Math.floor(Math.random() * (skipImages.length - 1));
   return (
