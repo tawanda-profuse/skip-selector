@@ -32,7 +32,7 @@ function App() {
     <>
       <main>
         {/* Navigation */}
-        <div className="flex my-[2rem] justify-center gap-[2rem] md:justify-between py-2 px-4 flex-wrap">
+        <div className="flex my-[2rem] justify-center gap-[2rem] md:justify-between items-center py-2 px-4 flex-wrap">
           {[
             {
               text: "Postcode",
@@ -59,6 +59,7 @@ function App() {
               icon: "fas fa-credit-card",
             },
           ].map((item, index) => (
+            <>
             <a
               className={`flex items-center gap-[0.5rem] text-lg font-medium ${
                 index === 2
@@ -70,6 +71,8 @@ function App() {
             >
               <i className={item.icon}></i> {item.text}
             </a>
+            {index < 5 && <i className="fas fa-arrow-right text-[#aaa]"></i>}
+            </>
           ))}
         </div>
         <h1 className="text-center mb-[1rem] text-3xl font-bold ">
